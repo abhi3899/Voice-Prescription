@@ -97,7 +97,7 @@ if __name__ == '__main__':
     for input_file in input_files:
         # Read input file
         sampling_freq, audio = wavfile.read(input_file)
-
+        print(sampling_freq)
         # Extract MFCC features
         mfcc_features = mfcc(audio, sampling_freq)
 

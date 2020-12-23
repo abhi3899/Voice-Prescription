@@ -36,7 +36,7 @@ for dirname in os.listdir(input_folder):
         sampling_freq, audio = wavfile.read(filepath)
 
         # Extract the MFCC features
-        mfcc_features = mfcc(audio, sampling_freq)
+        mfcc_features = mfcc(audio, sampling_freq, nfft=1103)
 
         # Append to the variable X
         if len(X) == 0:
